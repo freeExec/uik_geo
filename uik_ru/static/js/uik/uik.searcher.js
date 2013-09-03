@@ -238,7 +238,7 @@
 
             $divSearchResults.find('a.target').on('click', function () {
                 var $li = $(this).parent();
-                UIK.viewmodel.map.setView(new L.LatLng($li.data('lat'), $li.data('lon')), 18);
+                UIK.viewmodel.map.panTo(new L.LatLng($li.data('lat'), $li.data('lon')));
                 $('#target').show().delay(1000).fadeOut(1000);
             });
 
@@ -246,8 +246,6 @@
                 if (UIK.viewmodel.editable) { return false; }
 
                 var $li = $(this).parent(), uikId;
-                UIK.viewmodel.map.setView(new L.LatLng($li.data('lat'), $li.data('lon')), 18);
-                $('#target').show().delay(1000).fadeOut(1000);
                 uikId = $li.data('id');
                 $.getJSON(document['url_root'] + 'uik/' + uikId, function (data) {
                     if (!UIK.viewmodel.editable) {
