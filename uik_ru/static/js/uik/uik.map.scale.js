@@ -3,7 +3,7 @@
         version: null
     });
     $.extend(UIK.view, {
-        $scaleVilage: null,
+        $scaleVillage: null,
         $scaleHamlet: null,
         $scaleBuilding: null
     });
@@ -19,7 +19,7 @@
         setDomOptions: function () {
 		        var view = UIK.view;
             var scalePanel = $('#scale-panel');
-            view.$scaleVilage = scalePanel.find("a.vilage");
+            view.$scaleVillage = scalePanel.find("a.village");
             view.$scaleHamlet = scalePanel.find("a.hamlet");
             view.$scaleBuilding = scalePanel.find("a.building");
             
@@ -29,7 +29,7 @@
         bindEvents: function () {
             var view = UIK.view;
             
-            view.$scaleVilage.off('click').on('click', function () {
+            view.$scaleVillage.off('click').on('click', function () {
                 UIK.viewmodel.map.setView(UIK.viewmodel.map.getCenter(), 13);
             });
             view.$scaleHamlet.off('click').on('click', function () {

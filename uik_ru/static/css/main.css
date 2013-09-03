@@ -1017,3 +1017,15 @@ div.permalink {
     box-shadow: 0 0 5px #BBBBBB;
     margin: 0;
 }
+
+#scale-panel {
+	position: absolute;
+	left: 350px;
+	top: 10px;
+	width: 200px;
+	background-color: #F5F5F5;
+	border: 1px solid #AFAFAF;
+	border-radius: 4px;	
+	text-align: center;
+	font: 12px "Helvetica Neue", Arial, Helvetica, sans-serif;
+	}
